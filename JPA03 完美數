@@ -1,0 +1,27 @@
+import java.util.Scanner;    //沒用到
+public class JPA303 
+{
+	public static void main(String[] args) 
+	{
+        	int i, num, sum = 0;//題給
+        	System.out.printf("1~1000中的完美數有: ");//題給
+
+        	for(num=1;num<=1000;num++) //設num為1~1000
+		{
+			sum=0;      //每跑一個num清為0(將總和清為0)
+
+            		for(i=1;i<num;i++)  //判斷因數的公式
+			{	            //尋找num的因數
+                            if(num%i==0) 
+			     {
+					sum+=i; //題目要求條件(完美數-因數相加)
+		             }
+	            	}
+            		if(sum==num)  //題目要求條件(完美數相等)
+			{
+                		System.out.printf("%d ",num); //題給
+            		}
+        	}
+       		System.out.printf("\n");    //題給
+    	}
+}
